@@ -1,0 +1,109 @@
+.message-row {
+  margin: 40px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.message-container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  position: relative;
+}
+
+.delete-button {
+  margin-left: 30px;
+  padding: 5px;
+  position: absolute;
+  top: 100%;
+  cursor: pointer;
+  color: gray;
+  opacity: 0.75;
+}
+
+.delete-button:hover {
+  color: #5a5a5a;
+}
+
+.delete-button.button-visible {
+  animation: 1s fadeIn;
+  animation-fill-mode: forwards;
+}
+
+.delete-button.button-invisible {
+  animation: 1s fadeOut;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 1;
+    visibiltiy: visible;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.message-bubble {
+  margin: 0 30px;
+  position: relative;
+  width: 300px;
+  background: lightblue;
+}
+
+.message-bubble-tail:after {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 18px;
+  border: 9px solid;
+}
+
+.message-bubble-tail.left-tail:after {
+  left: -18px;
+  border-color: lightblue lightblue transparent transparent;
+}
+
+.message-bubble-tail.right-tail:after {
+  left: 300px;
+  border-color: lightblue transparent transparent lightblue;
+}
+
+.message-text {
+  padding: 1em;
+  line-height: 1.5em;
+}
+
+.message-header {
+  font-weight: bold;
+  position: relative;
+  top: -5px;
+}
+
+.message-text p {
+  margin: 0;
+}
+
+.message-timestamp {
+  position: relative;
+  top: 10px;
+  font-size: 0.75rem;
+  text-align: right;
+  color: gray;
+}

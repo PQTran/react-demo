@@ -1,0 +1,15 @@
+.image-thumbnail {
+  max-width: 100px;
+}
+
+.placeholder-thumbnail {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 4rem;
+  line-height: 80px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 80px;
+  height: 80px;
+  color: cadetblue;
+  background: lightgray;
+}
